@@ -1,20 +1,24 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<header>
+  <h1 class="text-danger text-center font-italic fixed-top mt-4">Birthday Invitation</h1>
+</header>
+<div class="form-group">
+  <br><br><br><br>
+  <div class="m-5" *ngIf=!show>
+    <input class="form-control" type="text" placeholder="Enter name" [(ngModel)]="name">
+    <button class="btn btn-outline-danger mt-3" (click)=switchVisibility()>Submit</button>
+  </div>
+  <div *ngIf=show>
+    <div class="card text-center m-5">
+      <div class="card-header">
+          Namaste
+      </div>
+      <div class="card-body">
+          <h4 class="card-title">Mr. {{ name }}</h4>
+          <p class="card-text">We whole heartedly welcome you to the bday celebration of Mr. {{ firstName + " " + lastName }}</p>
+      </div>
+      <div class="card-footer text-muted">
+          9th Nov, 7:30 A.M, at my home.
+      </div>
+    </div>
+  </div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-
