@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3">
+    <div class="container">
+        <a class="navbar-brand" href="#">Satyam Agrawal</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav" (click)="toggleNavbar()">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav" [ngClass]="{ 'show': navbarOpen }">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link"
+                    [ngClass]="{ 'text-center': navbarOpen }"
+                    routerLink="/home"
+                    routerLinkActive="active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                    [ngClass]="{ 'text-center': navbarOpen }"
+                    routerLink="/about"
+                    routerLinkActive="active">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                    [ngClass]="{ 'text-center': navbarOpen }"
+                    routerLink="/achievements"
+                    routerLinkActive="active">Achievements</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
